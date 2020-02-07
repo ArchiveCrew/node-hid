@@ -11,3 +11,9 @@ if( process.argv[2] ) {
 }
 
 console.log('devices:', HID.devices());
+
+var devices = HID.devices()
+for (var i = 0; i < devices.length; i++) {
+	var d = devices[i];
+	console.log(d.path, d.path.length);
+}
